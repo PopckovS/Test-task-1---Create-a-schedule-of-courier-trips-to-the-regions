@@ -15,14 +15,11 @@ class BaseModel
 			'password' => ''
 		];
 
-
 		// Подключение к PDO, установка атрибутов и перехват исключений
 		self::$connect = new PDO($array['host'],$array['login'],$array['password']);
 
-		if (self::$connect) {
-			//echo "Подключение удалось";
-		}else{
-			//echo "Подключение к БД провалено";
+		if (!self::$connect) {
+			die("Подключение к БД провалено");
 		}
 	}
 
@@ -117,6 +114,7 @@ class BaseModel
 		return $array;
 	}
 
+
 	/*
 		@return - array Массив с именами всех имеющихся курьеров
 	*/
@@ -187,6 +185,7 @@ class BaseModel
 		}
 		return $res;
 	}
+
 	
 	/*
 		@param  - string Название Региона
@@ -204,12 +203,6 @@ class BaseModel
 			$res = 0;
 		}
 		return $res;
-	}
-
-
-	public static function d($array)
-	{
-		echo "<pre>".print_r($array,1)."</pre>";
 	}
 
 }

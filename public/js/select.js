@@ -17,7 +17,7 @@ function sendAjaxFormSelect(result, ajax_form, url) {
         dataType: "html", //формат данных
         data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
         beforeSend: function(){
-	 		//$("#selectDate").prop("disabled", true); 
+	 		$("#selectDate").prop("disabled", true); 
 	 	},
         success: function(response) { //Данные отправлены успешно
             result = $.parseJSON(response);
@@ -25,7 +25,7 @@ function sendAjaxFormSelect(result, ajax_form, url) {
                 $('#result').append("<p>Регион : "+result[i].region+"<br/>Дата отправки : "+result[i].departure+
                 "<br/> Имя курьера : "+result[i].courier+"<br/> Дата прибытия : "+result[i].arrive+"</p><hr>")
             }
-            //$("#regionButton").prop("disabled", false);
+            $("#regionButton").prop("disabled", false);
         },
         error: function(response) { // Данные не отправлены
             $('#result').html('Ошибка. Данные не отправлены.');

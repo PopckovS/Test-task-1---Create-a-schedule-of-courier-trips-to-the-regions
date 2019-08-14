@@ -8,6 +8,7 @@ require_once '../BaseModel.php';
 */
 if (isset($_POST["region"])) { 
 
+    /* Формируем массив для результата*/
     $result = array(
         'message' => 'Запись внесена в БД',
     	'region'  => $_POST["region"],

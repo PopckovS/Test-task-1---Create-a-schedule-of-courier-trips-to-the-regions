@@ -3,6 +3,8 @@
 <!-- Форма отправки данных для внесения нового курьера в БД -->
  <div class="container">
  <div class="row main-form">
+
+ <!-- Форма регистрации нового курьера -->	
  <form id='ajaxFormCourier' class="" method="post" action="">
  
  <h4 class="cols-sm-2 control-label">Регистрация Курьера</h4>
@@ -24,7 +26,6 @@
  	</button>
  </div>
 
- 
  </form>
  </div>
  </div>

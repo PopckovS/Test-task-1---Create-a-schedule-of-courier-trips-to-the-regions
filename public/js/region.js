@@ -8,7 +8,7 @@ $( document ).ready(function() {
     );
 });
  
-/* Фунция отправки Ajax запроса на сиполненеи */
+/* Фунция отправки Ajax запроса на сиполнение */
 function sendAjaxFormRegion(result, ajax_form, url) {
  
     $.ajax({

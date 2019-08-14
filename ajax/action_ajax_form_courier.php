@@ -2,6 +2,9 @@
 
 require_once '../BaseModel.php'; 
 
+/*
+    Проверка введ-ных данных
+*/
 if (isset($_POST["name"])) { 
 
 	// Формируем массив для JSON ответа
